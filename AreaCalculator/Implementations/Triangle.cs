@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace AreaCalculator.Implementations
 {
-    public class Triangle : IRightTriangle
+    public class Triangle : ITriangle
     {
         public double A { get; }
 
@@ -34,9 +34,5 @@ namespace AreaCalculator.Implementations
             var p = (A + B + C) / 2;
             return Math.Sqrt(p * (p - A) * (p - B) * (p - C));
         }
-        public bool IsRightTriangle() =>
-                Math.Pow(A, 2) == (Math.Pow(B, 2) + Math.Pow(C, 2)) ||
-                Math.Pow(B, 2) == (Math.Pow(C, 2) + Math.Pow(A, 2)) ||
-                Math.Pow(C, 2) == (Math.Pow(A, 2) + Math.Pow(B, 2));
     }
 }

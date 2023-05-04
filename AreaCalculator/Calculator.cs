@@ -19,6 +19,6 @@ namespace AreaCalculator
             return figure?.GetArea();
         }
         public static bool CheckRightTriangle(double a, double b, double c) =>
-            new Triangle(a, b, c).IsRightTriangle();
+            new RightTriangle(a, b, c).IsRightTriangle();
     }
 }
